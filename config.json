@@ -1,0 +1,41 @@
+{
+  "channels": [
+    {
+      "name": "Lex Fridman",
+      "channel_id": "UCSHZKyawb77ixDdsGog4iWA",
+      "summary_style": "detailed",
+      "summary_length": 800,
+      "include_timestamps": true,
+      "post_to_twitter": true,
+      "post_to_blog": true
+    },
+    {
+      "name": "Andrew Huberman",
+      "channel_id": "UC2D2CMWXMOVWx7giW1n3LIg",
+      "summary_style": "bullet_points",
+      "summary_length": 600,
+      "include_timestamps": true,
+      "post_to_twitter": true,
+      "post_to_blog": true
+    },
+    {
+      "name": "3Blue1Brown",
+      "channel_id": "UCYO_jab_esuFRV4b17AJtAw",
+      "summary_style": "concise",
+      "summary_length": 400,
+      "include_timestamps": false,
+      "post_to_twitter": true,
+      "post_to_blog": false
+    }
+  ],
+  "global_settings": {
+    "default_summary_style": "concise",
+    "default_summary_length": 500,
+    "default_include_timestamps": true,
+    "max_videos_per_channel": 3,
+    "days_to_look_back": 1,
+    "openai_model": "gpt-4-turbo",
+    "summary_prompt_template": "Summarize the following YouTube video transcript in a {style} style with a maximum of {length} words. {timestamps_instruction}",
+    "timestamps_instruction": "Include key timestamps for important points."
+  }
+}
