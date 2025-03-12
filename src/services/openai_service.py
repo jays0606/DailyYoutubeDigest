@@ -8,6 +8,9 @@ import logging
 import os
 
 from openai import OpenAI
+from dotenv import load_dotenv
+
+load_dotenv()
 
 logger = logging.getLogger(__name__)
 
@@ -25,7 +28,7 @@ def generate_summary(
     include_timestamps=True,
     video_title=None,
     channel_name=None,
-    model="gpt-4-turbo",
+    model="gpt-4o",
 ):
     """
     Generate a summary of a YouTube video transcript using OpenAI's API.
@@ -141,7 +144,7 @@ def generate_tweet(summary, video_title, video_id, channel_name, max_length=280)
 
         # Call the OpenAI API
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo",  # Using a smaller model for efficiency
+            model="gpt-4o",
             messages=[
                 {
                     "role": "system",

@@ -14,11 +14,11 @@ from datetime import datetime, timedelta
 
 from dotenv import load_dotenv
 
-from services.openai_service import generate_summary
-from services.twitter_service import post_to_twitter
-from services.youtube_service import get_channel_videos, get_video_transcript
-from utils.config import load_config
-from utils.db import get_processed_videos, mark_video_as_processed
+from src.services.openai_service import generate_summary
+from src.services.twitter_service import post_to_twitter
+from src.services.youtube_service import get_channel_videos, get_video_transcript
+from src.utils.config import load_config
+from src.utils.db import get_processed_videos, mark_video_as_processed
 
 # Configure logging
 logging.basicConfig(
@@ -64,6 +64,10 @@ def process_video(video, channel_config):
         video_title=video_title,
         channel_name=channel_name,
     )
+
+    print("SUMMARY", summary)
+
+    return True
 
     if not summary:
         logger.warning(f"Could not generate summary for video {video_id}")
@@ -142,6 +146,8 @@ def main():
                 continue
 
             process_video(video, channel)
+
+            break
 
 
 if __name__ == "__main__":

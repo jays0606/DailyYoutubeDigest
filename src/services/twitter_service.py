@@ -9,7 +9,11 @@ import os
 
 import tweepy
 
-from services.openai_service import generate_tweet
+from src.services.openai_service import generate_tweet
+
+from dotenv import load_dotenv
+
+load_dotenv()
 
 logger = logging.getLogger(__name__)
 

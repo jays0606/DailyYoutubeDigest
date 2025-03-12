@@ -33,8 +33,8 @@
     "default_summary_length": 500,
     "default_include_timestamps": true,
     "max_videos_per_channel": 3,
-    "days_to_look_back": 1,
-    "openai_model": "gpt-4-turbo",
+    "days_to_look_back": 7,
+    "openai_model": "gpt-4o",
     "summary_prompt_template": "Summarize the following YouTube video transcript in a {style} style with a maximum of {length} words. {timestamps_instruction}",
     "timestamps_instruction": "Include key timestamps for important points."
   }
